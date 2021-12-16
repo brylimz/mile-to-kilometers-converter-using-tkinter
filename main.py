@@ -14,7 +14,7 @@ zero.grid(column=2, row=1)
 miles = Label(text="Miles", font=("Calibri", 10))
 miles.grid(column=3, row=0)
 
-km = Label(text="KM", font=("Calibri", 10))
+km = Label(text="Km", font=("Calibri", 10))
 km.grid(column=3, row=1)
 
 input = Entry(width=10)
@@ -22,9 +22,9 @@ input.grid(column=2, row=0)
 
 
 def calculating(*args):
-    b = float(input.get())
-    c = b * 1.60934
-    d = zero.config(text=c)
+    miles = float(input.get())
+    km = round(miles * 1.60934)
+    zero.config(text=km)
 
 
 calculate = Button(text="Calculate", command=calculating)
