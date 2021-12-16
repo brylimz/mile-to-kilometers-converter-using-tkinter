@@ -1,4 +1,5 @@
 from tkinter import *
+
 window = Tk()
 window.title("Mile to KM Converter")
 window.minsize(width=200, height=50)
@@ -16,19 +17,19 @@ miles.grid(column=3, row=0)
 km = Label(text="KM", font=("Calibri", 10))
 km.grid(column=3, row=1)
 
-
-def button_clicked():
-    print("eheh")
-
-
-calculate = Button(text="Calculate", command=button_clicked)
-calculate.grid(column=2, row=2)
-calculate.config(padx=5, pady=1)
-
 input = Entry(width=10)
 input.grid(column=2, row=0)
-input.get()
 
+
+def calculating(*args):
+    b = float(input.get())
+    c = b * 1.60934
+    d = zero.config(text=c)
+
+
+calculate = Button(text="Calculate", command=calculating)
+calculate.grid(column=2, row=2)
+calculate.config(padx=5, pady=1)
 
 
 window.mainloop()
